@@ -3,7 +3,7 @@
 fetch("https://github.com/NotHansCYDIa/Lighthouse/raw/refs/heads/main/bed/sample!.json")
   .then(r => {
     if (!r.ok) {
-      throw new Error("[HTTPE]" + r.status);
+      throw new Error("[HTTPE] " + r.status);
     }
     return r.json()
   })
@@ -14,5 +14,5 @@ fetch("https://github.com/NotHansCYDIa/Lighthouse/raw/refs/heads/main/bed/sample
     console.log("SUCCESSFUL: " + data["success"]);
   })
   .catch(e => {
-    throw new Error("[UE]" + e);
+    throw new Error(e);
   })
