@@ -1,6 +1,6 @@
 // test execution 5
 
-fetch("https://github.com/NotHansCYDIa/Lighthouse/raw/refs/heads/main/bed/sample!.json")
+fetch("https://github.com/NotHansCYDIa/Lighthouse/raw/refs/heads/main/bed/sample.json")
   .then(r => {
     if (!r.ok) {
       throw new Error("[HTTPE] " + r.status);
