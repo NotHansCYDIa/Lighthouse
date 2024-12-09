@@ -1,0 +1,19 @@
+on:
+  push:
+    paths:
+      - 'main/test/fetch/**'
+jobs:
+  run-fetch:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+        
+      - name: Test fetch.js
+        run: |
+          cd test/fetch
+          node fetch.js
+          if [ "$(node fetch.js | tail -n 1)" == "SUCCESSFUL: Yes" ]; then
+            exit 1
+          fi
+          exit 0
