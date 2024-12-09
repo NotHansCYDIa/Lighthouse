@@ -1,7 +1,7 @@
 on:
   push:
     paths:
-      - 'main/test/fetch/**'
+      - 'test/fetch/**'
 jobs:
   run-fetch:
     runs-on: ubuntu-latest
