@@ -1,3 +1,5 @@
+// test push
+
 fetch("https://github.com/NotHansCYDIa/Lighthouse/raw/refs/heads/main/bed/sample.json")
   .then(r => {
     if (!r.ok) {
