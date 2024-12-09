@@ -4,7 +4,7 @@ on:
     paths:
       - 'test/fetch/**'
 jobs:
-  run-fetch:
+  Run-Test:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout repository
