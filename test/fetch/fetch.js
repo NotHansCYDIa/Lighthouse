@@ -1,4 +1,4 @@
-// test push
+// test push 1
 
 fetch("https://github.com/NotHansCYDIa/Lighthouse/raw/refs/heads/main/bed/sample.json")
   .then(r => {
