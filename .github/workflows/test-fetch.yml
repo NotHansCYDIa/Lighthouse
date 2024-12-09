@@ -18,7 +18,7 @@ jobs:
 
           success="$(node fetch.js | tail -n 1)"
           if echo "$success" | grep -q "SUCCESSFUL: Yes"; then
-            echo "\n" # placeholder idk
+            echo " " # placeholder idk
           else
             echo "--[ RESULTS ]------------------------"
             echo "Fetch error."
