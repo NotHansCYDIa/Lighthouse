@@ -1,6 +1,7 @@
-fetch('../.netlify/functions/greet')
+fetch('/.netlify/functions/greet')
             .then(response => response.json())
             .then(data => {
-                document.getElementById('hello').innerText = data.message;
+                console.log(data)
+                document.getElementById('hello').innerText = JSON.stringify(data);
             })
             .catch(error => console.error('Error:', error));
