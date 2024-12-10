@@ -12,10 +12,7 @@ function fetchBackEnd(BED) {
             return fetch('https://github.com/NotHansCYDIa/Lighthouse/raw/refs/heads/main/bed/sample.json')
                 .then(response => response.json())
                 .then(data => {
-                    (async () => {
-                        const final = await frontBackEndCable(data)
-                        return final;  
-                    })
+                    return frontBackEndCable(JSON.stringify(data));
                 })
                 .catch(error => console.error('Error:', error));
         default:
@@ -30,10 +27,7 @@ function fetchFrontEnd(FED) {
             return fetch('https://github.com/NotHansCYDIa/Lighthouse/raw/refs/heads/main/fed/featured.json')
                 .then(response => response.json())
                 .then(data => {
-                    (async () => {
-                        const final = await frontBackEndCable(data)
-                        return final;  
-                    })
+                    return frontBackEndCable(JSON.stringify(data));
                 })
                 .catch(error => console.error('Error:', error));
         default:
@@ -41,7 +35,6 @@ function fetchFrontEnd(FED) {
             return null;
     }
 }
-
 async function frontBackEndCable(input) {
     const variablePattern = /!([^!]+)!/g;
     let match;
@@ -83,4 +76,4 @@ async function frontBackEndCable(input) {
 }
 
     
-export { fetchFrontEnd, frontEndData, frontBackEndCable, frontEndData, backEndData }
+export { fetchFrontEnd, frontEndData, frontBackEndCable }
