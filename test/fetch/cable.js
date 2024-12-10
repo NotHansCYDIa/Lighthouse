@@ -1,2 +1,2 @@
-import { fetchBackEnd, fetchFrontEnd, } from '../../services/fetcher.js';
-fetchBackEnd()
+import * from '../../services/fetcher.js';
+fetchBackEnd(backEndData.sample) // test
