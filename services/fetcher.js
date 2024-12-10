@@ -12,7 +12,10 @@ function fetchBackEnd(BED) {
             return fetch('https://github.com/NotHansCYDIa/Lighthouse/raw/refs/heads/main/bed/sample.json')
                 .then(response => response.json())
                 .then(data => {
-                    return data;  
+                    (async () => {
+                        const final = await frontBackEndCable(data)
+                        return final;  
+                    })
                 })
                 .catch(error => console.error('Error:', error));
         default:
@@ -27,7 +30,10 @@ function fetchFrontEnd(FED) {
             return fetch('https://github.com/NotHansCYDIa/Lighthouse/raw/refs/heads/main/fed/featured.json')
                 .then(response => response.json())
                 .then(data => {
-                    return data;  
+                    (async () => {
+                        const final = await frontBackEndCable(data)
+                        return final;  
+                    })
                 })
                 .catch(error => console.error('Error:', error));
         default:
