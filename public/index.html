@@ -2,13 +2,6 @@
   <body>
     <div id="hello"></div>
 
-    <script>
-        fetch('../.netlify/functions/greet')
-            .then(response => response.json())
-            .then(data => {
-                document.getElementById('hello').innerText = data.message;
-            })
-            .catch(error => console.error('Error:', error));
-    </script>
+    <script src="./script.js"></script>
   </body>
 </html>
