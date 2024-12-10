@@ -42,7 +42,7 @@ jobs:
           node cable.mjs
 
           success="$(node cable.mjs)"
-          if echo "$success" | grep -q "success: Yes"; then
+          if echo "$success" | grep -q "\"success\":\"Yes\""; then
             echo " " # placeholder idk
           else
             echo "--[ RESULTS ]------------------------"
