@@ -70,7 +70,7 @@ async function frontBackEndCable(input) {
     }
 
     const output = input.replace(/!([^!]+)!/g, (_, variable) => results[variable] || `!${variable}!`);
-    console.log("Output:", output);
+    // console.log("Output:", output); DEBUG ONLY
 
     return output; 
 }
