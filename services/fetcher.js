@@ -76,4 +76,5 @@ async function frontBackEndCable(input) {
 }
 
     
-export { fetchFrontEnd, fetchBackEnd, backEndData, frontEndData, frontBackEndCable }
+export { fetchFrontEnd, fetchBackEnd, backEndData, frontEndData, frontBackEndCable } // route 1
+module.exports = { fetchFrontEnd, fetchBackEnd, backEndData, frontEndData, frontBackEndCable } // route 2
