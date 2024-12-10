@@ -39,9 +39,9 @@ jobs:
         run: |
           cd test/fetch
           echo "--[ FETCH ]------------------------"
-          node cable.js
+          node cable.mjs
 
-          success="$(node cable.js | tail -n 2)"
+          success="$(node cable.mjs | tail -n 1)"
           if echo "$success" | grep -q "SUCCESSFUL: Yes"; then
             echo " " # placeholder idk
           else
