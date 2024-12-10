@@ -1,1 +1,2 @@
-import { fetchBackEnd, fetchFrontEnd } from '../../services/fetcher.js';
+import { fetchBackEnd, fetchFrontEnd, } from '../../services/fetcher.js';
+fetchBackEnd()
