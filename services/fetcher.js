@@ -83,4 +83,4 @@ async function frontBackEndCable(input) {
 }
 
     
-export { fetchFrontEnd, frontEndData, frontBackEndCable }
+export { fetchFrontEnd, frontEndData, frontBackEndCable, frontEndData, backEndData }
